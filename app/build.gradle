@@ -41,6 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    implementation project(path: ':customlist')
+    implementation 'com.github.SaifulSaif007:Android_Demo_Library:1.0.0'
 
 }

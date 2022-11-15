@@ -52,7 +52,7 @@ afterEvaluate {
 
                 groupId = 'com.github.SaifulSaif007'
                 artifactId = 'android-demo-library'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }

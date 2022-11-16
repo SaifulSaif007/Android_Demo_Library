@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.saiful.customdetails.DetailsActivity
 
 class ListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,8 +13,8 @@ class ListActivity : AppCompatActivity() {
 
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {
-//            val intent = Intent(this, DetailsActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, DetailsActivity::class.java)
+            startActivity(intent)
         }
     }
 }

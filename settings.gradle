@@ -10,7 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://jitpack.io'
+            credentials { username "jp_rksj8kqd5qmvd6uosa9bdi2iqv" }
+        }
     }
 }
 rootProject.name = "Android Library"

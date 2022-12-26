@@ -5,6 +5,8 @@ plugins {
 }
 
 android {
+    defaultPublishConfig "fullRelease"
+    publishNonDefault true
     compileSdk 32
 
     defaultConfig {
@@ -21,6 +23,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        demo {
+            dimension "version"
+        }
+        full {
+            dimension "version"
+        }
+
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -28,6 +42,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -49,11 +64,11 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
 
-                from components.release
+                from components.fullRelease
 
                 groupId = 'com.github.SaifulSaif007'
                 artifactId = 'android-demo-library'
-                version = '1.0.5'
+                version = '1.0.7'
             }
         }
     }

@@ -22,20 +22,7 @@ android {
         }
     }
 
-    flavorDimensions "version"
-    productFlavors {
-        demo {
-            dimension "version"
-            applicationIdSuffix ".demo"
-            versionNameSuffix "-demo"
-        }
-        full {
-            dimension "version"
-            applicationIdSuffix ".full"
-            versionNameSuffix "-full"
-        }
 
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -62,11 +49,11 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
 
-                from components.fullRelease
+                from components.release
 
                 groupId = 'com.github.SaifulSaif007'
                 artifactId = 'android-demo-library-details'
-                version = '1.0.5'
+                version = '1.0.6'
             }
         }
     }
